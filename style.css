@@ -729,7 +729,7 @@ header .wrapper-cart .cart-item span:after {
 }
 
 .s3.bg-image-fixed {
-    background-image: url(images/Seed_Homepage_DS01_Jar_NoDot_Desktop.jfif);
+    background-image: url(images/Seed_Homepage_DS01_Jar_Dot_phone.jfif);
 }
 
 .s3 .banner .container .wrapper-text {
@@ -798,7 +798,7 @@ header .wrapper-cart .cart-item span:after {
 }
 
 .s4.bg-image-fixed {
-    background-image: url(images/Seed_Homepage_DS01_Jar_NoDot_Desktop_Ginger.jfif);
+    background-image: url(images/Seed_Homepage_DS01_Jar_Dot_phone_Ginger.jfif);
 }
 
 .s4 .banner .container .wrapper-text {
@@ -867,7 +867,7 @@ header .wrapper-cart .cart-item span:after {
 }
 
 .s5.bg-image-fixed {
-    background-image: url(images/Seed_Homepage_DS01_Jar_NoDot_Desktop_Orange.jfif);
+    background-image: url(images/Seed_Homepage_DS01_Jar_Dot_phone_Orange.jfif);
 }
 
 .s5 .banner .container .wrapper-text {
@@ -1301,6 +1301,9 @@ footer .r4 .wrapper-right p {
     }
 
     /* Section 3 */
+    .s3.bg-image-fixed {
+        background-image: url(images/Seed_Homepage_DS01_Jar_NoDot_Desktop.jfif);
+    }
     .s3 .banner .container .wrapper-text {
         width: 350px;
     }
@@ -1330,6 +1333,10 @@ footer .r4 .wrapper-right p {
     }
 
     /* Section 4 */
+    .s4.bg-image-fixed {
+        background-image: url(images/Seed_Homepage_DS01_Jar_NoDot_Desktop_Ginger.jfif);
+    }
+
     .s4 .banner .container .wrapper-text {
         width: 350px;
     }
@@ -1359,6 +1366,10 @@ footer .r4 .wrapper-right p {
     }
 
     /* Section 5 */
+    .s5.bg-image-fixed {
+        background-image: url(images/Seed_Homepage_DS01_Jar_NoDot_Desktop_Orange.jfif);
+    }
+
     .s5 .banner .container .wrapper-text {
         width: 350px;
     }
