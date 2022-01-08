@@ -648,19 +648,6 @@ header .wrapper-cart .cart-item span:after {
     display: none;
 }
 
-.logoMiddle:after {
-    background: url("images/redbull-short-logo.png");
-    background-size: cover;
-    background-position: center;
-    transform: translate(-12px, -5px);
-    position: absolute;
-    height: 30px;
-    width: 40px;
-    content: "";
-    left: 46%;
-    top: 46%;
-    display: block;
-}
 
 .s2 .banner * {
     color: #1c3a13;
