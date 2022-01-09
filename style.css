@@ -1230,8 +1230,10 @@ footer .r4 .wrapper-right p {
     h1.title {
         font-size: 30px;
     }
-
-
+    /* Section 1 */
+    .s1 .wrapper-content .bg-image {
+        background: url(images/Seed_Homepage_Hero_BG.jpg);
+    }
     /* Section 2 */
     .s2 .bg-image {
         background-image: url(images/BG_explode_desktop.webp);
@@ -1243,6 +1245,13 @@ footer .r4 .wrapper-right p {
         height: 100%;
         top: 0;
         left: 0;
+    }
+    .s2 .bg-image .sequence {
+        position: fixed;
+        margin-left: 35%;
+        margin-right: auto;
+        width: 30%;
+        display: none;
     }
 
     .logoMiddle:after {
