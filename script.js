@@ -24,7 +24,6 @@ $(document).ready(function () {
         var scrollPos = $(document).scrollTop();
 
         if (scrollPos >= top2 && scrollPos < top3) {
-            console.log("fixed icon");
             $('.logoMiddle:after').css('background', 'red !important');
         }
 
@@ -42,29 +41,17 @@ $(document).ready(function () {
             $headerBG.css("background", "transparent");
             $headerBG.css("border-bottom", "none");
         }
-
-
-
-
     });
-
-
-
 });
 
 $(document).ready(function () {
 
     // Declare variables
-    var count = 171,
-        path = "img-sequence",
-        ext = "png",
-        scrollResolution = 50,
-        paths = [];
-
-    // Section parts
-    var top1 = parseInt($('.s1').height()) / 2;
-    var top3 = parseInt($('.s1').height()) + parseInt($('.s3').height()) / 2;
-
+	var count = 171,
+    path = "img-sequence",
+    ext = "png",
+    scrollResolution = 20,
+    paths = [];
 
     // add elements to array
     for (var i = 0; i <= count; i++) {
@@ -75,24 +62,34 @@ $(document).ready(function () {
     $sequenceWrapper = $('.wrapper-sequence');
     $sequenceWrapper.append(paths);
 
-    function animateSequence() {
-        var currentScrollPosition = window.pageYOffset;
-        var imageIndex = Math.round(currentScrollPosition / scrollResolution);
+    function animateSequence(scrollPos) {
+        
+        var imageIndex = Math.round(scrollPos / scrollResolution);
         if (imageIndex >= count) {
             imageIndex = count - 1; // Select last image
         }
+		
+		console.log("Animate: " + imageIndex);
+		
         $(".wrapper-sequence img").hide();
         $(".wrapper-sequence img").eq(imageIndex).show();
     }
 
+	function checkVisible(elm) {
+		var rect = elm.getBoundingClientRect();
+		var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+		return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+	}
+
     $(document).scroll(function () {
-        var scrollPos = $(document).scrollTop();
-        if (scrollPos >= top1 - 10 && scrollPos <= top3 - 10) { // check if section 2 is in view
-            animateSequence();
-        }
+		//var scrollPos = $(document).scrollTop();
+		var scrollPos = window.pageYOffset
+
+		var s2 = document.getElementById("s2").getBoundingClientRect();
+
+		if(checkVisible(document.getElementById("s2")))
+		{
+			animateSequence(scrollPos);
+		}
     });
 });
-
-
-
-
