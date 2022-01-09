@@ -1234,7 +1234,7 @@ footer .r4 .wrapper-right p {
 
     /* Section 2 */
     .s2 .bg-image {
-        /* background-image: url(images/BG_explode_desktop.webp); */
+        background-image: url(images/BG_explode_desktop.webp);
     }
 
     div.logoMiddle {
