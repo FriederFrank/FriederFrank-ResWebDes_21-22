@@ -1248,9 +1248,10 @@ footer .r4 .wrapper-right p {
     }
     .s2 .bg-image .sequence {
         position: fixed;
-        margin-left: 35%;
+        top: 10%;
+        margin-left: 17%;
         margin-right: auto;
-        width: 30%;
+        width: 70%;
         display: none;
     }
 
