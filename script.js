@@ -47,10 +47,9 @@ $(document).ready(function () {
 $(document).ready(function () {
 
     // Declare variables
-	var count = 171,
+    var count = 171,
     path = "img-sequence",
     ext = "png",
-    scrollResolution = 20,
     paths = [];
 
     // add elements to array
@@ -62,34 +61,51 @@ $(document).ready(function () {
     $sequenceWrapper = $('.wrapper-sequence');
     $sequenceWrapper.append(paths);
 
-    function animateSequence(scrollPos) {
+    function animateSequence() {
+
+        //var imageIndex = Math.round(scrollPos / scrollResolution);
+        var imageIndex = Math.round(count * (percentageSeen(document.getElementById("s2"))/100));
         
-        var imageIndex = Math.round(scrollPos / scrollResolution);
         if (imageIndex >= count) {
             imageIndex = count - 1; // Select last image
         }
-		
-		console.log("Animate: " + imageIndex);
-		
+
+        console.log("Animate: " + imageIndex);
+        
         $(".wrapper-sequence img").hide();
         $(".wrapper-sequence img").eq(imageIndex).show();
     }
 
-	function checkVisible(elm) {
-		var rect = elm.getBoundingClientRect();
-		var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
-		return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
-	}
+    function checkVisible(elm) {
+        var rect = elm.getBoundingClientRect();
+        var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+
+        return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    }
+    
+    function percentageSeen(elm) {
+        // Get the relevant measurements and positions
+        var viewportHeight = window.innerHeight;
+        var scrollTop = window.scrollY;
+        var elementOffsetTop = elm.offsetTop;
+        var elementHeight = elm.offsetHeight;
+
+        // Calculate percentage of the element that's been seen
+        var distance = (scrollTop + viewportHeight) - elementOffsetTop;
+        var percentage = Math.round(distance / ((viewportHeight + elementHeight) / 100));
+
+        // Restrict the range to between 0 and 100
+        return Math.min(100, Math.max(0, percentage));
+    }
+    
 
     $(document).scroll(function () {
-		//var scrollPos = $(document).scrollTop();
-		var scrollPos = window.pageYOffset
+        //var scrollPos = $(document).scrollTop();
+        var scrollPos = window.pageYOffset
 
-		var s2 = document.getElementById("s2").getBoundingClientRect();
-
-		if(checkVisible(document.getElementById("s2")))
-		{
-			animateSequence(scrollPos);
-		}
+        if(checkVisible(document.getElementById("s2")))
+        {
+            animateSequence();
+        }
     });
 });
