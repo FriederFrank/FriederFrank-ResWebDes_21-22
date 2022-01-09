@@ -640,7 +640,7 @@ header .wrapper-cart .cart-item span:after {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 30%;
 
     width: 100%;
     display: none;
@@ -1315,6 +1315,16 @@ footer .r4 .wrapper-right p {
         max-width: 200px;
         height: 50px;
         line-height: 50px;
+    }
+    .s2 .bg-image .sequence {
+        position: fixed;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 30%;
+    
+        width: 100%;
+        display: none;
     }
 
     /* Section 4 */
