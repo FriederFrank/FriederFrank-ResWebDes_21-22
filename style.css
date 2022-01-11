@@ -951,6 +951,15 @@ footer .row {
 
 footer .row.r3 {
     display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+footer .row.r3 a.link{
+    display: flex;
+    align-items: center;
+    width: fit-content;
 }
 
 footer .row.r4 {
