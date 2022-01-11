@@ -913,7 +913,7 @@ footer {
     display: flex;
     margin: 50px 0 0;
     padding: 40px 0;
-    background: #1c3a13;
+    background: #fff;
     width: 100%;
     position: relative;
     z-index: 1;
@@ -922,7 +922,7 @@ footer {
 }
 
 footer * {
-    color: #fff !important;
+    color: #1c3a13 !important;
     line-height: 1.2;
 }
 
@@ -975,6 +975,9 @@ footer .r1 .site-dot {
 
 footer .r1 .site-dot i {
     font-size: 23px;
+    fill: #1c3a13;
+    stroke: #1c3a13;
+
 }
 
 footer .r1 .title span {
@@ -1003,7 +1006,7 @@ footer form .form-group input {
     height: 50px;
     line-height: 50px;
     background: transparent;
-    border: 1px solid #fff;
+    border: 1px solid #1c3a13;
     padding: 0 20px;
 }
 
@@ -1037,7 +1040,7 @@ footer .r1 .wrapper-right a.link {
 
 footer .r1 .wrapper-right .link span.icon {
     content: "";
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #1c3a13;
     width: 40px;
     margin-right: 20px;
     position: relative;
@@ -1055,7 +1058,7 @@ footer .r1 .wrapper-right .link span.icon:after {
     top: 0;
     height: 7px;
     width: 7px;
-    border: 1px solid #fff;
+    border: 1px solid #1c3a13;
     border-left: 0;
     border-bottom: 0;
     transform: rotate(45deg) translate(-2px, -3px);
@@ -1180,8 +1183,9 @@ footer .r2 .wrapper-mobile {
 }
 
 .accordion .head .icon svg, .accordion .head .icon svg * {
-    fill: #fff;
-    stroke: #fff;
+    fill: #1c3a13;
+    stroke: #1c3a13;
+    color: #1c3a13;
 }
 
 /* Row 4 */
@@ -1250,7 +1254,7 @@ footer .r4 .wrapper-right p {
     .s2 .bg-image .sequence {
         position: fixed;
         display: block;
-        margin-left: auto;
+        margin-left: 35%;
         margin-right: auto;
         width: 30%;
         display: none;
