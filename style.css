@@ -1141,15 +1141,15 @@ footer .r2 .wrapper-mobile {
 
 .wrapper-accordion .accordion {
     display: block;
-    border: 1px solid #d2d7d0;
+    border: 1px solid #1c3a134b;
     border-right: 0;
     border-left: 0;
     border: 0;
-    border-bottom: 1px solid hsla(0, 0%, 100%, .2);
+    border-bottom: 1px solid #1c3a134b;
 }
 
 .wrapper-accordion .accordion:first-child {
-    border-top: 1px solid hsla(0, 0%, 100%, .2);
+    border-top: 1px solid #1c3a134b;
 }
 
 .expander {
