@@ -956,10 +956,13 @@ footer .row.r3 {
     font-weight: 300;
     line-height: 1.5;
 }
-footer .row.r3 a.link{
+
+footer .row.r3 a.link {
     display: flex;
     align-items: center;
     width: fit-content;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 footer .row.r4 {
@@ -1065,6 +1068,26 @@ footer .r1 .wrapper-right .link span.icon:after {
     position: absolute;
     right: 1px;
     top: 0;
+    height: 7px;
+    width: 7px;
+    border: 1px solid #1c3a13;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg) translate(-2px, -3px);
+}
+
+footer .r3 .link span.icon {
+    content: "";
+    border-bottom: 1px solid #1c3a13;
+    width: 40px;
+    margin-right: 20px;
+    position: relative;
+}
+
+footer .r3 .link span.icon:after {
+    content: "";
+    position: absolute;
+    right: 0px;
     height: 7px;
     width: 7px;
     border: 1px solid #1c3a13;
@@ -1243,10 +1266,12 @@ footer .r4 .wrapper-right p {
     h1.title {
         font-size: 30px;
     }
+
     /* Section 1 */
     .s1 .wrapper-content .bg-image {
         background: url(images/Seed_Homepage_Hero_BG.jpg);
     }
+
     /* Section 2 */
     .s2 .bg-image {
         background-image: url(images/BG_explode_desktop.webp);
@@ -1311,6 +1336,7 @@ footer .r4 .wrapper-right p {
     .s3.bg-image-fixed {
         background-image: url(images/Seed_Homepage_DS01_Jar_NoDot_Desktop.jfif);
     }
+
     .s3 .banner .container .wrapper-text {
         width: 350px;
     }
@@ -1499,14 +1525,14 @@ footer .r4 .wrapper-right p {
         top: 0;
         left: 0;
     }
-    
+
     .s1 .bg-image .wrapper-image .image {
         max-height: 300px;
         margin: auto;
         padding-left: 50px;
         margin-top: 290px;
     }
-    
+
     .s1 .bg-image .wrapper-image .image .inline {
         display: inline-block;
         max-width: 100%;
@@ -1515,7 +1541,7 @@ footer .r4 .wrapper-right p {
         box-sizing: border-box;
         margin: 0;
     }
-    
+
     .s1 .bg-image .wrapper-image .image img {
         box-sizing: border-box;
         padding: 0;
@@ -1622,45 +1648,48 @@ footer .r4 .wrapper-right p {
         margin: 0;
     }
 }
-@media screen and (min-width: 1921px) {´
-        /* Section 1 */
-        .s1 .wrapper-content .bg-image {
-            background: url(images/Seed_Homepage_Hero_BG.jpg);
-        }
-    
-        .s1 .bg-image .wrapper-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-        }
-        
-        .s1 .bg-image .wrapper-image .image {
-            max-height: 300px;
-            margin: auto;
-            padding-left: 50px;
-            margin-top: 370px;
-        }
-        
-        .s1 .bg-image .wrapper-image .image .inline {
-            display: inline-block;
-            max-width: 100%;
-            overflow: hidden;
-            position: relative;
-            box-sizing: border-box;
-            margin: 0;
-        }
-        
-        .s1 .bg-image .wrapper-image .image img {
-            box-sizing: border-box;
-            padding: 0;
-            border: none;
-            margin: auto;
-            display: block;
-            height: auto;
-            width: 385px;
-        }
+
+@media screen and (min-width: 1921px) {
+    ´
+
+    /* Section 1 */
+    .s1 .wrapper-content .bg-image {
+        background: url(images/Seed_Homepage_Hero_BG.jpg);
     }
+
+    .s1 .bg-image .wrapper-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .s1 .bg-image .wrapper-image .image {
+        max-height: 300px;
+        margin: auto;
+        padding-left: 50px;
+        margin-top: 370px;
+    }
+
+    .s1 .bg-image .wrapper-image .image .inline {
+        display: inline-block;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .s1 .bg-image .wrapper-image .image img {
+        box-sizing: border-box;
+        padding: 0;
+        border: none;
+        margin: auto;
+        display: block;
+        height: auto;
+        width: 385px;
+    }
+}
