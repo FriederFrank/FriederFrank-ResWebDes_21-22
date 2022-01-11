@@ -1073,7 +1073,7 @@ footer .r2 .wrapper-left, footer .r2 .wrapper-right {
 footer .r2 .wrapper-left .wrapper-list {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid hsla(0, 0%, 100%, .2);
+    border: 1px solid #1c3a13;
     padding: 20px;
     width: 350px;
 }
@@ -1217,7 +1217,7 @@ footer .r4 .wrapper-left .list a {
 footer .r4 .wrapper-right {
     width: 100%;
     max-width: 100%;
-    border: 1px solid hsla(0, 0%, 100%, .2);
+    border: 1px solid #1c3a13;
     margin: 20px 0 0;
     padding: 10px;
 }
