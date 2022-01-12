@@ -9,7 +9,7 @@ $(document).ready(function () {
     $("body").addClass("ready");
 
     // Header effect
-    $changeItems = $(".site-dot, .navbar, .wrapper-cart");
+    $changeItems = $(".site-dot, .navbar, .wrapper-cart, .burger-menu");
     $changeItems.addClass("white");
     $headerBG = $("header .wrapper-absolute");
     $headerBG.css("background", "transparent");
