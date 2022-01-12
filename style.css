@@ -336,10 +336,8 @@ section .wrapper-content {
     stroke: #1c3a13;
     color: #1c3a13;
     fill: #1c3a13;
-
-
-
 }
+
 
 .site-dot.white i {
     background-size: 40px 40px;
@@ -349,9 +347,35 @@ section .wrapper-content {
     fill: #fff;
 }
 
+.burger-menu i {
+    background-size: 40px 40px;
+    display: block;
+    margin-top: 15px;
+    height: 40px;
+    width: 40px;
+    stroke: #1c3a13;
+    color: #1c3a13;
+    fill: #1c3a13;
+}
+
+
+.burger-menu.white i {
+    background-size: 40px 40px;
+    margin-top: 15px;
+    stroke: #fff;
+    color: #fff;
+    fill: #fff;
+}
+
+
 .navbar.white .nav-item a, header .wrapper-right .navbar.white .nav-item, header .wrapper-right .wrapper-cart.white .cart-item {
     color: #fff;
 }
+
+
+.hide-on-mobile {
+		display: none;
+	}
 
 
 /* Button + Links
@@ -481,7 +505,7 @@ header .wrapper-right {
 
 header .navbar {
     padding-left: 50px;
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -1438,6 +1462,10 @@ footer .r4 .wrapper-right p {
         height: 40px;
     }
 
+	/* Long texts */
+	.hide-on-mobile {
+		display: block;
+	}
 
 }
 
@@ -1476,11 +1504,6 @@ footer .r4 .wrapper-right p {
         margin-top: -19px;
     }
 }
-
-
-
-
-
 
 @media screen and (min-width: 64em) {
 
@@ -1647,10 +1670,27 @@ footer .r4 .wrapper-right p {
         width: 400px;
         margin: 0;
     }
+	
+	
+	/*
+	Burger
+	
+	*/
+	
+	.burger-menu {	
+		display: none;
+	}
+	
+	
+	/* Navbar */
+	header .navbar {
+		display: flex;
+	}
+	
+	
 }
 
-@media screen and (min-width: 1921px) {
-    ´
+@media screen and (min-width: 1921px) { 
 
     /* Section 1 */
     .s1 .wrapper-content .bg-image {
