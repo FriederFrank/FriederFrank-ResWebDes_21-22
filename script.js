@@ -36,10 +36,13 @@ $(document).ready(function () {
             $changeItems.removeClass("white");
             $headerBG.css("background", "white");
             $headerBG.css("border-bottom", "1px solid rgba(29,58,21,.2)");
-        } else if (scrollPos >= top3) {
+        } else if (scrollPos >= top3 && scrollPos < footer) {
             $changeItems.addClass("white");
             $headerBG.css("background", "transparent");
             $headerBG.css("border-bottom", "none");
+        } else if (scrollPos >= footer) {
+            $changeItems.removeClass("white");
+            $headerBG.css("border-bottom", "1px solid #1c3a13");
         }
     });
 });
@@ -48,9 +51,9 @@ $(document).ready(function () {
 
     // Declare variables
     var count = 171,
-    path = "img-sequence",
-    ext = "png",
-    paths = [];
+        path = "img-sequence",
+        ext = "png",
+        paths = [];
 
     // add elements to array
     for (var i = 0; i <= count; i++) {
@@ -64,14 +67,14 @@ $(document).ready(function () {
     function animateSequence() {
 
         //var imageIndex = Math.round(scrollPos / scrollResolution);
-        var imageIndex = Math.round(count * (percentageSeen(document.getElementById("s2"))/100));
-        
+        var imageIndex = Math.round(count * (percentageSeen(document.getElementById("s2")) / 100));
+
         if (imageIndex >= count) {
             imageIndex = count - 1; // Select last image
         }
 
         console.log("Animate: " + imageIndex);
-        
+
         $(".wrapper-sequence img").hide();
         $(".wrapper-sequence img").eq(imageIndex).show();
     }
@@ -82,7 +85,7 @@ $(document).ready(function () {
 
         return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
     }
-    
+
     function percentageSeen(elm) {
         // Get the relevant measurements and positions
         var viewportHeight = window.innerHeight;
@@ -97,15 +100,27 @@ $(document).ready(function () {
         // Restrict the range to between 0 and 100
         return Math.min(100, Math.max(0, percentage));
     }
-    
+
 
     $(document).scroll(function () {
         //var scrollPos = $(document).scrollTop();
         var scrollPos = window.pageYOffset
 
-        if(checkVisible(document.getElementById("s2")))
-        {
+        if (checkVisible(document.getElementById("s2"))) {
             animateSequence();
         }
     });
+
+
+    // Menu
+    $(".burger-menu").click(function () {
+        $(".wrapper-mobile-menu").animate({ left: "0" });
+    });
+    $(".close-button").click(function () {
+        console.log("click");
+        $(".wrapper-mobile-menu").animate({ left: "100%" });
+    });
+
+
+
 });
